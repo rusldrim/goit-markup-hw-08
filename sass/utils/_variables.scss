@@ -1,0 +1,61 @@
+$primary-text-color: #212121;
+$text-color: #757575;
+$accent-color: #2196F3;
+$logo-color: #000;
+$secondary-logo-color: #fff;
+$secondary-background-color: #2F303A;
+$team-background-color: #F5F4FA;
+$address-color: #FFFFFF;
+$contacts-color: rgba(255, 255, 255, 0.6);
+$hat-text-color: #FFFFFF;
+$accent-background-color: #188CE8;
+$border-color: #EEEEEE;
+$border-header-color: #ECECEC;
+$card-set-gap: 30px;
+$hat-background-color: #C4C4C4;
+$cust-border-color: #AFB1B8;
+$social-background-color: rgba(255, 255, 255, 0.1);
+$card-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+0px 4px 4px rgba(0, 0, 0, 0.06),
+1px 4px 6px rgba(0, 0, 0, 0.16);
+
+body {
+    background-color: $address-color;
+    color: $primary-text-color;
+    font-family: Roboto, sans-serif;
+}
+header {
+    border-bottom: 1px solid $border-header-color;
+}
+footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $secondary-background-color;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 1200px;
+    // outline: 2px solid tomato;
+}
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+ 

@@ -1,0 +1,103 @@
+.team__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    background-color: $team-background-color;
+}
+
+.team__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.team__roster {
+    @extend %list;
+    display: flex;
+}
+
+.team__roster .team__item+.team__item {
+    margin-left: 30px;
+}
+
+.team__item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.team__rubric {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    border-radius: 0px 0px 4px 4px;
+
+    background-color: $hat-text-color;   
+}
+
+.team__text {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    
+    background-color: $hat-text-color;
+}
+
+.team__note {
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    color: $text-color;
+    background-color: $hat-text-color;
+}
+
+// Соціальні мережі
+.team__social {
+    @extend %list;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.team__social .team__link+.team__link {
+    margin-left: 10px;
+}
+
+.team__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 44px;
+    height: 44px;
+    text-decoration: none;
+    border: none;
+    border-radius: 50%;
+
+    fill: $cust-border-color;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+        fill: $hat-text-color;
+    }
+}
+
+.team__icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
