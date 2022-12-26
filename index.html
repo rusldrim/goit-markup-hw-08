@@ -17,6 +17,15 @@
         <div class="container ph">
             <nav class="navigation">
                 <a href="./index.html" class="navigation__logo">Web<span class="navigation__logoblack">Studio</span></a>
+                <button 
+                type="button" 
+                class="menu-toggle js-open-menu" 
+                aria-expanded="false"
+                aria-controls="mobile-menu">
+                    <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+                        <use class="navigation__icon-menu" href="./images/icons.svg#icon-menu_40px"></use>
+                    </svg>
+                </button>
                 <ul class="navigation__site list">
                     <li class="navigation__item">
                         <a href="./index.html" class="navigation__link navigation__link--active">Студія</a>
@@ -46,14 +55,54 @@
                 </li>
             </ul>
         </div>
+        <!-- Мобільне меню -->
+        <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu">
+                <svg width="40" height="40">
+                    <use class="navigation__icon-menu" href="./images/icons.svg#icon-close_40px"></use>
+                </svg>
+            </button>
+            <ul class="menu-navigation list">
+                <li class="menu-navigation__item">
+                    <a href="./index.html" class="menu-navigation__link menu-navigation__link--active">Студія</a>
+                </li>
+                <li class="menu-navigation__item">
+                    <a href="./portfolio.html" class="menu-navigation__link">Портфоліо</a>
+                </li>
+                <li class="menu-navigation__item">
+                    <a href="#" class="menu-navigation__link">Контакти</a>
+                </li>
+            </ul>
+            <ul class="menu-contacts list">
+                <li class="menu-contacts__item">
+                    <a href="tel:+380961111111" class="menu-contacts__link menu-contacts__link--active">+38 096 111 11 11</a>
+                </li>
+                <li class="menu-contacts__item">
+                    <a href="mailto:info@devstudio.com" class="menu-contacts__link">info@devstudio.com</a>
+                </li>
+            </ul>
+            <ul class="menu-social">
+                <li class="menu-social__item">
+                    <a href="#" class="menu-social__link">Instagram</a>
+                </li>
+                <li class="menu-social__item">
+                    <a href="#" class="menu-social__link">Twitter</a>
+                </li>
+                <li class="menu-social__item">
+                    <a href="#" class="menu-social__link">Facebook</a>
+                </li>
+                <li class="menu-social__item">
+                    <a href="#" class="menu-social__link">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <main>
-
         <!--Шапка-->
         <section class="hat">
-                <h1 class="hat__title">Ефективні рішення для вашого бізнесу</h1>
-                <button data-modal-open class="hat__button" type="button">Замовити послугу</button>           
+            <h1 class="hat__title">Ефективні рішення для вашого бізнесу</h1>
+            <button data-modal-open class="hat__button" type="button">Замовити послугу</button>           
         </section>
 
         <!--Особливості-->
@@ -109,7 +158,12 @@
 
                     <li class="work__item">
                         <div class="work__thumb">
-                            <img src="images/box1.jpg" alt="Верстка на ноутбуі" width="370">
+                            <img srcset="
+                            ./images/desktop-foto/box1-370.jpg 1x,
+                            ./images/desktop-foto/box1-740.jpg 2x"
+                            src="./images/desktop-foto/box1-370.jpg"
+                            alt="Верстка на ноутбуці"
+                            width="370">
                             <div class="work__text">
                                 <p class="work__note">Десктопні додатки</p>
                             </div>                          
@@ -118,7 +172,12 @@
 
                     <li class="work__item">
                         <div class="work__thumb">
-                            <img src="images/box2.jpg" alt="Перегляд на ноутбуці екрана телефона" width="370">
+                            <img srcset="
+                            ./images/desktop-foto/box2-370.jpg 1x,
+                            ./images/desktop-foto/box2-740.jpg 2x"
+                            src="./images/desktop-foto/box2-370.jpg"
+                            alt="Перегляд на ноутбуці екрана телефона"
+                            width="370">
                             <div class="work__text">
                                 <p class="work__note">Мобільні додатки</p>
                             </div>
@@ -127,7 +186,12 @@
                     </li>
                     <li class="work__item">
                         <div class="work__thumb">
-                            <img src="images/box3.jpg" alt="Кольоровий шестикутник на планшеті" width="370">
+                            <img srcset="
+                            ./images/desktop-foto/box3-370.jpg 1x,
+                            ./images/desktop-foto/box3-740.jpg 2x" 
+                            src="./images/desktop-foto/box3-370.jpg"
+                            alt="Кольоровий шестикутник на планшеті"
+                            width="370">
                             <div class="work__text">
                                 <p class="work__note">Дизайнерські рішення</p>
                             </div>
@@ -142,8 +206,36 @@
             <div class="container">
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__roster list">
-                    <li class="team__item">                        
-                        <img src="images/igor.jpg" alt="Чоловік в окулярах та сорочці" width="270">
+                    <li class="team__item">
+                        <picture>
+                            <source srcset="
+                                            ./images/mobile-foto/igor-450.webp 1x,
+                                            ./images/mobile-foto/igor-900.webp 2x
+                                          " media="(max-width: 479px)" type="image/webp">
+                            <source srcset="
+                                            ./images/mobile-foto/igor-450.jpg 1x,
+                                            ./images/mobile-foto/igor-900.jpg 2x
+                                          " media="(min-width: 479px)" type="image/jpeg">
+                            <source srcset="
+                                            ./images/tablet-foto/igor-354.webp 1x,
+                                            ./images/tablet-foto/igor-709.webp 2x
+                                          " media="(max-width: 767px)" type="image/webp">
+                            <source srcset="
+                                            ./images/tablet-foto/igor-354.jpg 1x,
+                                            ./images/tablet-foto/igor-709.jpg 2x
+                                          " media="(min-width: 767px)" type="image/jpeg">
+                            <source srcset="
+                                            ./images/desktop-foto/igor-270.webp 1x,
+                                            ./images/desktop-foto/igor-540.webp 2x
+                                          " media="(max-width: 1199px)" type="image/webp">
+                            <source srcset="
+                                            ./images/desktop-foto/igor-270.jpg 1x,
+                                            ./images/desktop-foto/igor-540.jpg 2x
+                                          " media="(min-width: 1199px)" type="image/jpeg">
+                            <img src="./images/mobile-foto/igor-450.jpg" 
+                            alt="Чоловік в окулярах та сорочці">
+                        </picture>
+
                         <div class="team__rubric">
                             <h3 class="team__text">Ігор Дем'яненко</h3>
                             <p class="team__note">Product Designer</p>
@@ -180,7 +272,34 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="images/olga.jpg" alt="Дівчина блондинка в окулярах" width="270">
+                        <picture>
+                            <source srcset="
+                                            ./images/mobile-foto/olga-450.webp 1x,
+                                            ./images/mobile-foto/olga-900.webp 2x
+                                          " media="(max-width: 479px)" type="image/webp">
+                            <source srcset="
+                                            ./images/mobile-foto/olga-450.jpg 1x,
+                                            ./images/mobile-foto/olga-900.jpg 2x
+                                          " media="(min-width: 479px)" type="image/jpeg">
+                            <source srcset="
+                                            ./images/tablet-foto/olga-354.webp 1x,
+                                            ./images/tablet-foto/olga-709.webp 2x
+                                          " media="(max-width: 767px)" type="image/webp">
+                            <source srcset="
+                                            ./images/tablet-foto/olga-354.jpg 1x,
+                                            ./images/tablet-foto/olga-709.jpg 2x
+                                          " media="(min-width: 767px)" type="image/jpeg">
+                            <source srcset="
+                                            ./images/desktop-foto/olga-270.webp 1x,
+                                            ./images/desktop-foto/olga-540.webp 2x
+                                          " media="(max-width: 1199px)" type="image/webp">
+                            <source srcset="
+                                            ./images/desktop-foto/olga-270.jpg 1x,
+                                            ./images/desktop-foto/olga-540.jpg 2x
+                                          " media="(min-width: 1199px)" type="image/jpeg">
+                            <img src="./images/mobile-foto/igor-450.jpg" 
+                            alt="Чоловік в окулярах та сорочці">
+                        </picture>
                         <div class="team__rubric">
                             <h3 class="team__text">Ольга Рєпіна</h3>
                             <p class="team__note">Frontend Developer</p>
@@ -217,7 +336,34 @@
                         </div>                                                  
                     </li>
                     <li class="team__item">
-                        <img src="images/mykola.jpg" alt="Чоловік в синій сорочці" width="270">
+                        <picture>
+                            <source srcset="
+                                            ./images/mobile-foto/nicholas-450.webp 1x,
+                                            ./images/mobile-foto/nicholas-900.webp 2x
+                                          " media="(max-width: 479px)" type="image/webp">
+                            <source srcset="
+                                            ./images/mobile-foto/nicholas-450.jpg 1x,
+                                            ./images/mobile-foto/nicholas-900.jpg 2x
+                                          " media="(min-width: 479px)" type="image/jpeg">
+                            <source srcset="
+                                            ./images/tablet-foto/nicholas-354.webp 1x,
+                                            ./images/tablet-foto/nicholas-709.webp 2x
+                                          " media="(max-width: 767px)" type="image/webp">
+                            <source srcset="
+                                            ./images/tablet-foto/nicholas-354.jpg 1x,
+                                            ./images/tablet-foto/nicholas-709.jpg 2x
+                                          " media="(min-width: 767px)" type="image/jpeg">
+                            <source srcset="
+                                            ./images/desktop-foto/nicholas-270.webp 1x,
+                                            ./images/desktop-foto/nicholas-540.webp 2x
+                                          " media="(max-width: 1199px)" type="image/webp">
+                            <source srcset="
+                                            ./images/desktop-foto/nicholas-270.jpg 1x,
+                                            ./images/desktop-foto/nicholas-540.jpg 2x
+                                          " media="(min-width: 1199px)" type="image/jpeg">
+                            <img src="./images/mobile-foto/igor-450.jpg" 
+                            alt="Чоловік в окулярах та сорочці">
+                        </picture>
                         <div class="team__rubric">
                             <h3 class="team__text">Микола Тарасов</h3>
                             <p class="team__note">Marketing</p>
@@ -254,7 +400,35 @@
                         </div>                                            
                     </li>
                     <li class="team__item">
-                        <img src="images/mykhailo.jpg" alt="Чоловік в окулярах та чорній футболці" width="270">
+                        <picture>
+                            <source srcset="
+                                            ./images/mobile-foto/mykhailo-450.webp 1x,
+                                            ./images/mobile-foto/mykhailo-900.webp 2x
+                                          " media="(max-width: 479px)" type="image/webp">
+                            <source srcset="
+                                            ./images/mobile-foto/mykhailo-450.jpg 1x,
+                                            ./images/mobile-foto/mykhailo-900.jpg 2x
+                                          " media="(min-width: 479px)" type="image/jpeg">
+                            <source srcset="
+                                            ./images/tablet-foto/mykhailo-354.webp 1x,
+                                            ./images/tablet-foto/mykhailo-709.webp 2x
+                                          " media="(max-width: 767px)" type="image/webp">
+                            <source srcset="
+                                            ./images/tablet-foto/mykhailo-354.jpg 1x,
+                                            ./images/tablet-foto/mykhailo-709.jpg 2x
+                                          " media="(min-width: 767px)" type="image/jpeg">
+                            <source srcset="
+                                            ./images/desktop-foto/mykhailo-270.webp 1x,
+                                            ./images/desktop-foto/mykhailo-540.webp 2x
+                                          " media="(max-width: 1199px)" type="image/webp">
+                            <source srcset="
+                                            ./images/desktop-foto/mykhailo-270.jpg 1x,
+                                            ./images/desktop-foto/mykhailo-540.jpg 2x
+                                          " media="(min-width: 1199px)" type="image/jpeg">
+                            <img src="./images/mobile-foto/igor-450.jpg" 
+                            alt="Чоловік в окулярах та сорочці">
+                        </picture>
+                        
                         <div class="team__rubric">
                             <h3 class="team__text">Михайло Єрмаков</h3>
                             <p class="team__note">UI Designer</p>
@@ -353,55 +527,57 @@
     <footer>
         <div class="container">
             <div class="footer-box">
-                <div class="footer-address">
-                    <a href="./index.html" class="footer-address__logo">Web<span class="footer-address__logo--inverse">Studio</span></a>
-                    <address>
-                        <ul class="footer-address__roster list">
-                            <li class="footer-address__item">
-                                <p class="footer-address__title">м. Київ, пр-т Лесі Українки, 26</p>
+                <div class="footer__item">
+                    <div class="footer-address">
+                        <a href="./index.html" class="footer-address__logo">Web<span class="footer-address__logo--inverse">Studio</span></a>
+                        <address>
+                            <ul class="footer-address__roster list">
+                                <li class="footer-address__item">
+                                    <p class="footer-address__title">м. Київ, пр-т Лесі Українки, 26</p>
+                                </li>
+                                <li class="footer-address__item">
+                                    <a href="mailto:info@devstudio.com" class="footer-address__link">info@devstudio.com</a>
+                                </li>
+                                <li class="footer-address__item">
+                                    <a href="tel:+380961111111" class="footer-address__link">+38 096 111 11 11</a>
+                                </li>
+                            </ul>
+                        </address>
+                    </div>
+                    <div class="footer-social">
+                        <p class="footer-social__text">Приєднуйтесь</p>
+                        <ul class="footer-social__roster list">
+                            <li class="footer-social__item">
+                                <a href="#" class="footer-social__link">
+                                    <svg width="20" height="20">
+                                        <use href="./images/icons.svg#icon-instagram2"></use>
+                                    </svg>
+                                </a>
                             </li>
-                            <li class="footer-address__item">
-                                <a href="mailto:info@devstudio.com" class="footer-address__link">info@devstudio.com</a>
+                            <li class="footer-social__item">
+                                <a href="#" class="footer-social__link">
+                                    <svg width="20" height="20">
+                                        <use href="./images/icons.svg#icon-twitter2"></use>
+                                    </svg>
+                                </a>
                             </li>
-                            <li class="footer-address__item">
-                                <a href="tel:+380961111111" class="footer-address__link">+38 096 111 11 11</a>
+                            <li class="footer-social__item">
+                                <a href="#" class="footer-social__link">
+                                    <svg class="join-icon" width="20" height="20">
+                                        <use href="./images/icons.svg#icon-facebook2"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-social__item">
+                                <a href="#" class="footer-social__link">
+                                    <svg width="20" height="20">
+                                        <use href="./images/icons.svg#icon-linkedin2"></use>
+                                    </svg>
+                                </a>
                             </li>
                         </ul>
-                    </address>
-                </div>
-                <div class="footer-social">
-                    <p class="footer-social__text">Приєднуйтесь</p>
-                    <ul class="footer-social__roster list">
-                        <li class="footer-social__item">
-                            <a href="#" class="footer-social__link">
-                                <svg width="20" height="20">
-                                    <use href="./images/icons.svg#icon-instagram2"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-social__item">
-                            <a href="#" class="footer-social__link">
-                                <svg width="20" height="20">
-                                    <use href="./images/icons.svg#icon-twitter2"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-social__item">
-                            <a href="#" class="footer-social__link">
-                                <svg class="join-icon" width="20" height="20">
-                                    <use href="./images/icons.svg#icon-facebook2"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-social__item">
-                            <a href="#" class="footer-social__link">
-                                <svg width="20" height="20">
-                                    <use href="./images/icons.svg#icon-linkedin2"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                    </div>
+                </div>    
                 <div class="footer-mail">
                     <p class="footer-mail__text">Підпишіться на розсилку</p>
                     <form class="footer-mail__sign">
@@ -476,8 +652,11 @@
             </form>
         </div>
     </div>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous">
+    </script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>   
 </body>
 </html>
-
-
