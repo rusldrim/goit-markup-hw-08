@@ -1,0 +1,115 @@
+.footer-box {
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+    }
+}
+
+.footer__item {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: baseline;
+    }
+}
+
+.footer-address {
+    @media screen and (min-width: 768px) {
+        margin-left: 76px;
+        margin-right: 165px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-left: 0;
+        margin-right: 70px;
+    }
+
+
+}
+
+.footer-address__logo {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    text-align: center;
+
+    color: $accent-color;
+
+    &--inverse {
+        color: $secondary-logo-color;
+    }
+
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+    }
+}
+
+.footer-address__roster {
+    @extend %list;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0;
+    }
+
+}
+
+.footer-address__item {
+    padding: 0;
+    margin-bottom: 8px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 9px;
+    }
+
+}
+
+.footer-address__title {
+    margin: 0;
+    padding: 0;
+
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    font-style: normal;
+
+    color: $address-color;
+}
+
+.footer-address__link {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+
+    color: $contacts-color;
+
+    @media screen and (min-width: 1200px) {
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+    }
+}
+
+   
