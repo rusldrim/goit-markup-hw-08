@@ -50,9 +50,31 @@
 .contacts__icon {
     margin-right: 8px;
 
+
     fill: currentColor;
 
     @media screen and (min-width: 1200px) {
         margin-right: 10px;
+    }
+}
+
+.contacts__icon--smartphone {
+    width: 10px;
+    height: 14px;
+
+    @media screen and (min-width: 1200px) {
+        width: 10px;
+        height: 16px;
+    }
+    
+}
+
+.contacts__icon--envelope {
+    width: 14px;
+    height: 10px;
+
+    @media screen and (min-width: 1200px) {
+        width: 16px;
+        height: 12px;
     }
 }

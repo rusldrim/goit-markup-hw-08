@@ -15,20 +15,22 @@
     text-align: center;
 
     background-color: $hat-background-color;
-}
 
-@media (min-device-pixel-ratio: 2),
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
-    .hat {
-        background-image: linear-gradient(to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)), url(../images/mobile-foto/header-960.jpg);
+    @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        .hat {
+            background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)), url(../images/mobile-foto/header-960.jpg);
+        }
     }
 }
 
-@media (min-width: 489px) {
+
+
+@media (min-width: 768px) {
     .hat {
         background-image: linear-gradient(to right,
         rgba(47, 48, 58, 0.4),
@@ -49,7 +51,7 @@
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1200px) {
     .hat {
         background-image: linear-gradient(to right,
         rgba(47, 48, 58, 0.4),
