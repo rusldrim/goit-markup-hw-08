@@ -7,24 +7,33 @@
 }
 
 .footer__item {
+    margin-bottom: 60px;
+
     @media screen and (min-width: 768px) {
         display: flex;
         align-items: baseline;
+        justify-content: space-around;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+        margin-right: 93px;
     }
 }
 
 .footer-address {
+    margin-bottom: 60px;
+
     @media screen and (min-width: 768px) {
-        margin-left: 76px;
-        margin-right: 165px;
+        margin-bottom: 0;
     }
+   
 
     @media screen and (min-width: 1200px) {
         margin-left: 0;
+        margin-bottom: 0;
         margin-right: 70px;
     }
-
-
 }
 
 .footer-address__logo {
@@ -53,7 +62,7 @@
 
 .footer-address__roster {
     @extend %list;
-    margin-bottom: 60px;
+    
 
     @media screen and (min-width: 1200px) {
         display: flex;
