@@ -73,7 +73,6 @@
 }
 
 .hat__title {
-    width: 360px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -86,6 +85,10 @@
     text-transform: uppercase;
 
     color: $hat-text-color;
+
+    @media screen and (min-width: 1200px) {
+        width: 360px;
+    }        
 
     @media screen and (min-width: 1200px) {
         width: 696px;
